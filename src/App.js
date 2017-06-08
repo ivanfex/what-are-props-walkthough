@@ -6,66 +6,36 @@ import React from 'react';
 import Todo from './Todo';
 
 
-class App extends React.Component {
+class App extends Component {
 
 // Establish a function that we are going to be passing
-// into the Todo Component. 
-  fun(e){
-    alert("We're about to get White Castle");
+// into the Todo Component.
+  funMe(){
+    alert("You're a wizard");
   }
 
   render() {
-
     return (
       <div>
-        <Todo name="Pick up My cousins kids"
-              age="24" data={data}
-              alert={this.fun} />
+
       </div>
     );
-  }
-}
-
-// inputting an object.
-const data = {'todo': [1,2,3,4]}
-
-// passing an array
-// const data = [1,2,3,4]
-
-// passing a number
-// const data = 4
-
-// inserting objects within an array
-// App.defaultProps=[{
-//   name: "whatever",
-//   age: 24,
-//   single: true
-//
-// }]
-
-// Just an object with properties
-// App.defaultProps={
-//   name: "whatever",
-//   age: 24,
-//   single: true
-//
-// }
-
-// Passing an object with one key and two elements in an array
-App.defaultProps={
-
-  "status": [{
-  name: "whatever",
-  age: 24,
-  single: true
-  },
-  {
-    name: "whomever",
-    age: 99,
-    single: false
-  }]
-
 
 }
+
+// Fix all the errors that are plaguing this application thus far.
+// After you're done with that, please follow the instructions below.
+
+// 1. Create some default Props and pass them along to your
+// child component.
+
+// 2. Display that content in either an h tag or a p tag.
+
+// 2. Pass the funMe function to your child component and when
+// someone clicks on a button, it will show the alert on from this component.
+
+
+
+
 
 export default App;
