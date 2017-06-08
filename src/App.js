@@ -10,7 +10,7 @@ class App extends Component {
 
 // Establish a function that we are going to be passing
 // into the Todo Component.
-  funMe(){
+  alertMe(){
     alert("You're a wizard");
   }
 
