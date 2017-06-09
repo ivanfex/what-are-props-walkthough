@@ -8,64 +8,42 @@ import Todo from './Todo';
 
 class App extends React.Component {
 
+  constructor(){
+    super();
+
+  }
+
 // Establish a function that we are going to be passing
-// into the Todo Component. 
-  fun(e){
-    alert("We're about to get White Castle");
+// into the Todo Component.
+
+  handleSubmit(e){
+    e.preventDefault();
+  }
+
+  handleChange(e){
+    e.preventDefault();
+  
   }
 
   render() {
-
     return (
       <div>
-        <Todo name="Pick up My cousins kids"
-              age="24" data={data}
-              alert={this.fun} />
+
+        <form onSubmit={(event)=> this.handleSubmit(event)}>
+          <input onChange={()=>this.handleChange(event)} />
+          <input type="submit"/>
+        </form>
+
       </div>
     );
   }
 }
 
-// inputting an object.
-const data = {'todo': [1,2,3,4]}
 
-// passing an array
-// const data = [1,2,3,4]
+// Change the state of both the local component and the parent component
+// introduce the local loop and creating a new component to handle the loop
+// talk about key in the <li>
+// constructor method
 
-// passing a number
-// const data = 4
-
-// inserting objects within an array
-// App.defaultProps=[{
-//   name: "whatever",
-//   age: 24,
-//   single: true
-//
-// }]
-
-// Just an object with properties
-// App.defaultProps={
-//   name: "whatever",
-//   age: 24,
-//   single: true
-//
-// }
-
-// Passing an object with one key and two elements in an array
-App.defaultProps={
-
-  "status": [{
-  name: "whatever",
-  age: 24,
-  single: true
-  },
-  {
-    name: "whomever",
-    age: 99,
-    single: false
-  }]
-
-
-}
 
 export default App;
