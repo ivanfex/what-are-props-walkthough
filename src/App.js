@@ -6,21 +6,22 @@ import React from 'react';
 import Todo from './Todo';
 
 
-class App extends Component {
+class App extends React.Component {
 
 // Establish a function that we are going to be passing
 // into the Todo Component.
-  alertMe(){
-    alert("You're a wizard");
-  }
+      alertMe(){
+        alert("You're a wizard");
+      }
 
-  render() {
-    return (
-      <div>
+      render() {
+        return (
+          <div>
+              <Todo wiz={ this.alertMe }/>
+          </div>
+        );
 
-      </div>
-    );
-
+    }
 }
 
 // Fix all the errors that are plaguing this application thus far.

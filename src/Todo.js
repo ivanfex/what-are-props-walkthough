@@ -1,13 +1,15 @@
-import React, { Component } from 'react';
-
-
+import React from 'react';
 
 class Todo extends React.Component{
-
-  return(
-
-  )
-
+    render(){
+        return(
+            <div>
+                <button onClick={ this.props.wiz }>
+                    Are you a wizard?
+                </button>
+            </div>
+        );
+    }
 }
 
-export Todo
+export default Todo;
